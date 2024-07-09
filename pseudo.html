@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover and Not Example</title>
+    <style>
+        .list-item {
+            padding: 10px;
+            margin: 5px;
+            background-color: lightgray;
+            border: 1px solid #ccc;
+        }
+
+        /* Change background color on hover */
+        .list-item:hover {
+            background-color: lightblue;
+        }
+
+        /* Exclude items with the class 'no-hover' from hover effect */
+        .list-item:not(.no-hover):hover {
+            background-color: lightblue;
+        }
+
+        /* Additional style for no-hover items */
+        .no-hover {
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li class="list-item">Item 1</li>
+        <li class="list-item">Item 2</li>
+        <li class="list-item no-hover">Item 3 (No Hover)</li>
+        <li class="list-item">Item 4</li>
+        <li class="list-item no-hover">Item 5 (No Hover)</li>
+    </ul>
+</body>
+</html>
